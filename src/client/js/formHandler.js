@@ -1,7 +1,7 @@
 function handleSubmit(e) {
   e.preventDefault();
 
-  const baseURL = "http://localhost:8080/sentiment";
+  const baseURL = "http://localhost:8081/sentiment";
   const url = document.getElementById("url").value;
 
   if (isURL(url)) {
@@ -16,10 +16,10 @@ function handleSubmit(e) {
       .then(res => res.json())
       .then(res => {
         document.getElementById(
-          "results"
+          "polarity"
         ).innerHTML = `Polarity: ${res.polarity}<br>`;
         document.getElementById(
-          "results"
+          "subjectivity"
         ).innerHTML = `Subjectivity: ${res.subjectivity}`;
       });
   } else {

@@ -25,19 +25,39 @@
             <section>
                 <form class="" onsubmit="return handleSubmit(event)">
                     <input id="url" type="url" name="input" placeholder="Enter URL here">
-                    <input type="submit" name="" value="submit" onclick="return Client.handleSubmit(event)" onsubmit="return Client.handleSubmit(event)">
+                    <input type="submit" id="submit" value="submit" onclick="return Client.handleSubmit(event)" onsubmit="return Client.handleSubmit(event)">
                 </form>
             <section>
 
             <section>
-                <strong>Form Results:</strong>
-                <div id="results"></div>
+               <!-- <strong>Form Results:</strong>
+                <div id="subjectivity"></div>
+                <div id="polarity"></div> -->
+                <table>
+                    <tr>
+                        <th>Polarity</th>
+                        <td id="polarity"></td>
+                    </tr>
+                    <tr>
+                        <th>Subjectivity</th>
+                        <td id="subjectivity"></td>
+                    </tr>
+
+                </table>
             </section>
         </main>
 
         <footer>
             <p>Made with &#129505; by Abdelwahab Muhammed</p>
         </footer>
-
+        <script>
+            // Check that service workers are supported
+            if ('serviceWorker' in navigator) {
+                // Use the window load event to keep the page load performant
+                window.addEventListener('load', () => {
+                    navigator.serviceWorker.register('/service-worker.js');
+                });
+            }
+        </script>
     </body>
 </html>

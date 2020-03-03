@@ -7,9 +7,44 @@ body {
 
 main {
   flex: 2;
+  margin: 10rem;
+  box-shadow: 0 0.5rem 2rem rgba(0, 0, 0, 0.2);
 }
 
 section {
   max-width: 800px;
   margin: 50px auto;
+  padding: 5rem;
+}
+
+table {
+  width: 100%;
+  padding: 5rem;
+  border: 1px solid black;
+  border-collapse: collapse;
+  th,
+  td {
+    border: 1px solid black;
+    border-collapse: collapse;
+  }
+}
+
+#submit {
+  color: #ffffff;
+  background-color: #ff3366;
+  text-transform: uppercase;
+  font-weight: bold;
+  padding: 15px;
+  border-radius: 50px;
+  display: inline-block;
+  border: none;
+  transition: all 0.4s ease 0s;
+  cursor: pointer;
+}
+
+#submit:hover {
+  background: #434343;
+  letter-spacing: 1px;
+  box-shadow: 5px 40px -10px rgba(0, 0, 0, 0.57);
+  transition: all 0.4s ease 0s;
 }
