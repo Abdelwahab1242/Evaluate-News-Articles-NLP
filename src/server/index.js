@@ -47,6 +47,7 @@ app.post("/sentiment", (req, res) => {
     if (error === null) {
       projectData["polarity"] = response.polarity;
       projectData["subjectivity"] = response.subjectivity;
+      projectData["text"] = response.text;
 
       res.send(projectData);
       console.log(projectData);
